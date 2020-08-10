@@ -1,0 +1,8 @@
+.column {
+  display: flex;
+  height: 100vh;
+}
+.images {
+  margin-left: 250px;
+  width: 100%;
+}
