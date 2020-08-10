@@ -3,6 +3,7 @@ import { ScreenShotType, Group } from '../interfaces'
 import Layout from '../components/Layout'
 import List from '../components/List'
 import { categories } from '../data/categories'
+import { endpoint } from '../api/const'
 
 type Props = {
   group?: Group
@@ -36,9 +37,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const group = params?.group
-    // const res = await fetch(`/api/images${group ? `?group=${group}` : ''}`);
-    // const images: ScreenShotType[] = await res.json()
-    const images: ScreenShotType[] = [];
+    const res = await fetch(`${endpoint}/images${group ? `?group=${group}` : ''}`);
+    const images: ScreenShotType[] = await res.json()
     if (images.length === 0) return { props: { group, errors: 'There is no image' } }
     return {
       props: {

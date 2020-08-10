@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next'
 import { ScreenShotType } from '../interfaces'
 import Layout from '../components/Layout'
 import List from '../components/List'
+import { endpoint } from '../api/const'
 
 type Props = {
   images: ScreenShotType[]
@@ -14,9 +15,8 @@ const WithStaticProps = ({ images }: Props) => (
 )
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const res = await fetch('/api/images');
-  // const images = await res.json()
-  const images: ScreenShotType[] = [];
+  const res = await fetch(`${endpoint}/images`);
+  const images = await res.json()
   return { props: { images } }
 }
 
