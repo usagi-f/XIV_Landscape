@@ -36,7 +36,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const group = params?.group
-    const res = await fetch(`http://localhost:3000/api/images${group ? `?group=${group}` : ''}`);
+    const res = await fetch(`/api/images${group ? `?group=${group}` : ''}`);
     const images: ScreenShotType[] = await res.json()
     if (images.length === 0) return { props: { group, errors: 'There is no image' } }
     return {
