@@ -14,8 +14,9 @@ const WithStaticProps = ({ images }: Props) => (
 )
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch('/api/images');
-  const images = await res.json()
+  // const res = await fetch('/api/images');
+  // const images = await res.json()
+  const images: ScreenShotType[] = [];
   return { props: { images } }
 }
 
