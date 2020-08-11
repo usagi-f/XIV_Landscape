@@ -6,3 +6,12 @@
   margin-left: 250px;
   width: 100%;
 }
+
+@media screen and (max-width: 890px) {
+  .column {
+    flex-direction: column;
+  }
+  .images {
+    margin-left: 0;
+  }
+}
