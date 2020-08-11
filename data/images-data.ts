@@ -25,4 +25,12 @@ export const imagesData: ScreenShotType[] = [
     file: 'ffxiv_20190707_225257_855.jpg',
     group: 'Norvrandt',
   },
+  {
+    file: 'ffxiv_20200811_184328_465.jpg',
+    group: 'The_Black_Shroud',
+  },
+  {
+    file: 'ffxiv_20200811_185122_258.jpg',
+    group: 'The_Black_Shroud',
+  },
 ];
