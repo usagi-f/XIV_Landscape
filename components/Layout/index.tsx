@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
-import Side from '../Side'
+import Nav from '../Nav'
 import styles from './index.module.css';
 
 type Props = {
@@ -16,7 +16,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <div className={styles.column}>
-      <Side />
+      <Nav />
       <section className={styles.images}>
         {children}
       </section>

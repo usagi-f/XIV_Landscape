@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from './index.module.css';
 import { categories } from '../../data/categories';
 
-const Side = () => (
+const Nav = () => (
   <header className={styles.section}>
     <h1>
       <Link href="/">
@@ -25,4 +25,4 @@ const Side = () => (
   </header>
 )
 
-export default Side
+export default Nav
