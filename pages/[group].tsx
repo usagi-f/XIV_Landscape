@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import List from '../components/List'
 import { categories } from '../data/categories'
 import { endpoint } from '../api/const'
+import { shuffle } from '../utils/shuffle'
 
 type Props = {
   group?: Group
@@ -31,14 +32,15 @@ export default StaticPropsDetail
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = categories.map(category => `/${category}`);
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const group = params?.group
     const res = await fetch(`${endpoint}/images${group ? `?group=${group}` : ''}`);
-    const images: ScreenShotType[] = await res.json()
+    const json = await res.json();
+    const images: ScreenShotType[] = shuffle(json);
     if (images.length === 0) return { props: { group, errors: 'There is no image' } }
     return {
       props: {
