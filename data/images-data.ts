@@ -41,4 +41,16 @@ export const imagesData: ScreenShotType[] = [
     file: 'ffxiv_20200811_200823_073.jpg',
     group: 'La_Noscea',
   },
+  {
+    file: 'ffxiv_20200811_214316_455.jpg',
+    group: 'Norvrandt',
+  },
+  {
+    file: 'ffxiv_20200812_171517_734.jpg',
+    group: 'Norvrandt',
+  },
+  {
+    file: 'ffxiv_20200812_180348_860.jpg',
+    group: 'Norvrandt',
+  },
 ];
