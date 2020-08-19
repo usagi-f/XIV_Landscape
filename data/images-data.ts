@@ -53,4 +53,28 @@ export const imagesData: ScreenShotType[] = [
     file: 'ffxiv_20200812_180348_860.jpg',
     group: 'Norvrandt',
   },
+  {
+    file: 'ffxiv_20200812_230743_622.jpg',
+    group: 'Dravania',
+  },
+  {
+    file: 'ffxiv_20200813_015606_184.jpg',
+    group: 'Othard',
+  },
+  {
+    file: 'ffxiv_20200813_022037_120.jpg',
+    group: 'Dravania',
+  },
+  {
+    file: 'ffxiv_20200814_144139_145.jpg',
+    group: 'Mor_Dhona',
+  },
+  {
+    file: 'ffxiv_20200815_184417_806.jpg',
+    group: 'Norvrandt',
+  },
+  {
+    file: 'ffxiv_20200816_022153_270.jpg',
+    group: 'Abalathia',
+  },
 ];
