@@ -91,7 +91,7 @@ export const imagesData: ScreenShotType[] = [
   },
   {
     file: 'ffxiv_20200825_223600_947.jpg',
-    group: '????',
+    group: 'Etc',
   },
   {
     file: 'ffxiv_20200912_004154_510.jpg',

@@ -10,7 +10,7 @@ export const categories = [
   'Gyr_Abania',
   'Othard',
   'Norvrandt',
-  '????'
+  'Etc'
 ] as const
 
 /*
@@ -78,7 +78,7 @@ export const categories = [
 - The Rak'tika Greatwood
 - The Tempest
 
-# ????
+# Etc
 - Return to Ivalice raids
 
 */

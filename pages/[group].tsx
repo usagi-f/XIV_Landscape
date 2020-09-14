@@ -38,6 +38,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const group = params?.group
+    console.log(params);
     const res = await fetch(`${endpoint}/images${group ? `?group=${group}` : ''}`);
     const json = await res.json();
     const images: ScreenShotType[] = shuffle(json);
