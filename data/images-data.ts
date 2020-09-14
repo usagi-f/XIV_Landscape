@@ -77,4 +77,24 @@ export const imagesData: ScreenShotType[] = [
     file: 'ffxiv_20200816_022153_270.jpg',
     group: 'Abalathia',
   },
+  {
+    file: 'ffxiv_20200816_213859_868.jpg',
+    group: 'Dravania',
+  },
+  {
+    file: 'ffxiv_20200817_014032_202.jpg',
+    group: 'Gyr_Abania',
+  },
+  {
+    file: 'ffxiv_20200818_010842_637.jpg',
+    group: 'Gyr_Abania',
+  },
+  {
+    file: 'ffxiv_20200825_223600_947.jpg',
+    group: '????',
+  },
+  {
+    file: 'ffxiv_20200912_004154_510.jpg',
+    group: 'Dravania',
+  },
 ];
