@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next';
 import { ScreenShotType, Group } from '../interfaces';
 import Layout from '../components/Layout';
 import List from '../components/List';
-import { endpoint } from './api/const';
+import { fetchClient } from '../lib/fetch';
 import { shuffle } from '../utils/shuffle';
 
 type Props = {
@@ -12,15 +12,11 @@ type Props = {
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const group = query.group;
-  const json = await fetch(
-    `${endpoint}/images?group=${group}`
-  )
-    .then((res) => res.json())
-    .catch(() => []);
+  const res = await fetchClient<ScreenShotType[]>(`/images?group=${group}`);
   return {
     props: {
       group,
-      images: shuffle(json),
+      images: shuffle(res),
     },
   };
 };

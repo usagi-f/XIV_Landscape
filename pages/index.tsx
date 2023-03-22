@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next';
 import { ScreenShotType } from '../interfaces';
 import Layout from '../components/Layout';
 import List from '../components/List';
-import { endpoint } from './api/const';
+import { fetchClient } from '../lib/fetch';
 import { shuffle } from '../utils/shuffle';
 
 type Props = {
@@ -10,10 +10,8 @@ type Props = {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const json = await fetch(`${endpoint}/images`)
-    .then((res) => res.json())
-    .catch(() => []);
-  return { props: { images: shuffle(json) } };
+  const res = await fetchClient<ScreenShotType[]>(`/images`);
+  return { props: { images: shuffle(res) } };
 };
 
 const Index = ({ images }: Props) => (
