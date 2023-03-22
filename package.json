@@ -1,6 +1,6 @@
 {
   "name": "xiv-landscape",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "dev": "NODE_OPTIONS='--openssl-legacy-provider' next",
     "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
