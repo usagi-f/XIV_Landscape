@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next';
 import { ScreenShotType } from '../interfaces';
 import Layout from '../components/Layout';
 import List from '../components/List';
-import { endpoint } from '../api/const';
+import { endpoint } from './api/const';
 import { shuffle } from '../utils/shuffle';
 
 type Props = {
@@ -16,8 +16,9 @@ const WithStaticProps = ({ images }: Props) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${endpoint}/images`);
-  const json = await res.json();
+  const json = await fetch(`${endpoint}/images`)
+    .then((res) => res.json())
+    .catch(() => []);
   const images = shuffle(json);
   return { props: { images } };
 };

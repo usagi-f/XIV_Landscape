@@ -6,9 +6,7 @@ import { categories } from '../../data/categories';
 const Nav = () => (
   <header className={styles.section}>
     <h1>
-      <Link href="/">
-        <a>&gt; XIV_Landscape()</a>
-      </Link>
+      <Link href="/">&gt; XIV_Landscape()</Link>
     </h1>
     <p>
       This site is a personal page that contains screenshots of FFXIV taken by
@@ -19,9 +17,7 @@ const Nav = () => (
       <ul>
         {categories.map((category) => (
           <li key={category}>
-            <Link href={`/${category}`}>
-              <a>{category}</a>
-            </Link>
+            <Link href={`/${category}`}>{category}</Link>
           </li>
         ))}
       </ul>

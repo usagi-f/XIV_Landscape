@@ -3,7 +3,7 @@ import { ScreenShotType, Group } from '../interfaces';
 import Layout from '../components/Layout';
 import List from '../components/List';
 import { categories } from '../data/categories';
-import { endpoint } from '../api/const';
+import { endpoint } from './api/const';
 import { shuffle } from '../utils/shuffle';
 
 type Props = {
@@ -53,6 +53,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     };
   } catch (err) {
-    return { props: { errors: err.message } };
+    return { props: { errors: (err as any).message } };
   }
 };
