@@ -5,7 +5,8 @@
     "dev": "NODE_OPTIONS='--openssl-legacy-provider' next",
     "build": "NODE_OPTIONS='--openssl-legacy-provider' next build",
     "start": "NODE_OPTIONS='--openssl-legacy-provider' next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "format:fix": "prettier --write ."
   },
   "dependencies": {
     "next": "latest",
@@ -16,7 +17,8 @@
     "@types/node": "^18.15.5",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
-    "typescript": "3.7.3"
+    "typescript": "3.7.3",
+    "prettier": "2.8.5"
   },
   "license": "ISC"
 }

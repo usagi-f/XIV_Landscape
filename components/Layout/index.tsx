@@ -1,12 +1,12 @@
-import React, { ReactNode } from 'react'
-import Head from 'next/head'
-import Nav from '../Nav'
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
+import Nav from '../Nav';
 import styles from './index.module.css';
 
 type Props = {
-  children?: ReactNode
-  title?: string
-}
+  children?: ReactNode;
+  title?: string;
+};
 
 const Layout = ({ children, title = 'This is the default title' }: Props) => (
   <>
@@ -17,11 +17,9 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <div className={styles.column}>
       <Nav />
-      <section className={styles.images}>
-        {children}
-      </section>
+      <section className={styles.images}>{children}</section>
     </div>
   </>
-)
+);
 
-export default Layout
+export default Layout;

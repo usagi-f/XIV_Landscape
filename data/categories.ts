@@ -10,8 +10,8 @@ export const categories = [
   'Gyr_Abania',
   'Othard',
   'Norvrandt',
-  'Etc'
-] as const
+  'Etc',
+] as const;
 
 /*
 # La_Noscea

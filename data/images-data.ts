@@ -1,4 +1,4 @@
-import { ScreenShotType } from '../interfaces'
+import { ScreenShotType } from '../interfaces';
 
 export const imagesData: ScreenShotType[] = [
   {

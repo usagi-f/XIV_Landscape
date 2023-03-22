@@ -12,13 +12,13 @@
 .section p {
   margin-top: 30px;
   font-size: 12px;
-  opacity: .7;
+  opacity: 0.7;
   line-height: 1.4em;
 }
 
 .section a {
   color: #fff;
-  opacity: .7;
+  opacity: 0.7;
   text-decoration: none;
 }
 
@@ -73,7 +73,7 @@
     border-color: transparent #fff;
     border-width: 9px 13px;
     border-style: solid;
-    opacity: .7;
+    opacity: 0.7;
     margin-bottom: 20px;
   }
   .section ul {

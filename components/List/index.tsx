@@ -1,13 +1,13 @@
-import * as React from 'react'
+import * as React from 'react';
 import { ScreenShotType } from '../../interfaces';
 import ScreenShot from '../ScreenShot';
 import styles from './index.module.css';
 
 interface ScreenShotProps {
-  images: ScreenShotType[]
+  images: ScreenShotType[];
 }
 
-const List = ({images}: ScreenShotProps) => (
+const List = ({ images }: ScreenShotProps) => (
   <ul className={styles.list}>
     {images.map((image, index) => (
       <li key={`${image.file}-${index}`}>
@@ -15,6 +15,6 @@ const List = ({images}: ScreenShotProps) => (
       </li>
     ))}
   </ul>
-)
+);
 
 export default List;
