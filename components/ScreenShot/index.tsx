@@ -9,7 +9,13 @@ interface ScreenShotProps {
 
 const ScreenShot = ({ image }: ScreenShotProps) => (
   <a href={`/static/${image.file}`} target="_blank" className={styles.img}>
-    <Image src={`/static/thumb/${image.file}`} fill quality={90} alt="Screen Shot" />
+    <Image
+      src={`/static/${image.file}`}
+      width={320}
+      height={180}
+      quality={90}
+      alt="Screen Shot"
+    />
   </a>
 );
 
