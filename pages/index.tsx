@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { ScreenShotType } from '../interfaces';
 import Layout from '../components/Layout';
 import List from '../components/List';
@@ -9,18 +9,17 @@ type Props = {
   images: ScreenShotType[];
 };
 
-const WithStaticProps = ({ images }: Props) => (
+export const getServerSideProps: GetServerSideProps = async () => {
+  const json = await fetch(`${endpoint}/images`)
+    .then((res) => res.json())
+    .catch(() => []);
+  return { props: { images: shuffle(json) } };
+};
+
+const Index = ({ images }: Props) => (
   <Layout title="> XIV_Landscape">
     <List images={images} />
   </Layout>
 );
 
-export const getStaticProps: GetStaticProps = async () => {
-  const json = await fetch(`${endpoint}/images`)
-    .then((res) => res.json())
-    .catch(() => []);
-  const images = shuffle(json);
-  return { props: { images } };
-};
-
-export default WithStaticProps;
+export default Index;
