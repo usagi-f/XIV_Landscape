@@ -10,10 +10,10 @@ type Props = {
   images: ScreenShotType[];
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const group = params?.group;
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  const group = query.group;
   const json = await fetch(
-    `${endpoint}/images?group=${group}}`
+    `${endpoint}/images?group=${group}`
   )
     .then((res) => res.json())
     .catch(() => []);
