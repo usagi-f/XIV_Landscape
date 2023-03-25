@@ -1,14 +1,17 @@
 .column {
-  display: flex;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 250px 1fr;
 }
 .images {
-  margin-left: 250px;
   width: 100%;
+  overflow: scroll;
+  padding: 18px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 890px) {
   .column {
+    display: flex;
     flex-direction: column;
   }
   .images {

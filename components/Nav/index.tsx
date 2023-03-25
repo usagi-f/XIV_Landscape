@@ -4,7 +4,7 @@ import styles from './index.module.css';
 import { categories } from '../../data/categories';
 
 const Nav = () => (
-  <header className={styles.section}>
+  <div className={styles.section}>
     <h1>
       <Link href="/">&gt; XIV_Landscape()</Link>
     </h1>
@@ -22,7 +22,7 @@ const Nav = () => (
         ))}
       </ul>
     </nav>
-  </header>
+  </div>
 );
 
 export default Nav;
