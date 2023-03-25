@@ -22,6 +22,9 @@ const ScreenShot = ({ image }: ScreenShotProps) => {
         height={180}
         quality={90}
         alt="Screen Shot"
+        style={{
+          objectFit: 'cover',
+        }}
       />
     </button>
   );
