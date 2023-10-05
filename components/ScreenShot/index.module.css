@@ -12,7 +12,7 @@
 .wrapper img {
   vertical-align: bottom;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .wrapper img:hover,
 .wrapper img:focus {

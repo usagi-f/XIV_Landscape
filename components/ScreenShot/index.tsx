@@ -25,6 +25,7 @@ const ScreenShot = ({ image }: ScreenShotProps) => {
         style={{
           objectFit: 'cover',
         }}
+        priority
       />
     </button>
   );
