@@ -12,10 +12,15 @@
   color: white;
 }
 
-.overlay img {
+.wrapper {
   width: 100vw;
   max-width: 1280px;
-  height: auto;
+  height: 100vh;
   overflow: hidden;
-  border-radius: 8px;
+  position: relative;
+  margin: auto;
+}
+
+.image {
+  object-fit: contain;
 }

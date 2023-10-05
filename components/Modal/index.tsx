@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Image from 'next/image';
 import { createPortal } from 'react-dom';
 import { useModalContext } from './context';
 import styles from './index.module.css';
@@ -13,7 +14,9 @@ const Overlay: React.FC<{ url: string }> = ({ url }) => {
       className={styles.overlay}
       onClick={() => updateUrl(null)}
     >
-      <img src={url} alt="" />
+      <div className={styles.wrapper}>
+        <Image src={url} alt="" fill className={styles.image} />
+      </div>
     </button>
   );
 };
