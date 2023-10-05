@@ -26,6 +26,12 @@ const ScreenShot = ({ image }: ScreenShotProps) => {
           objectFit: 'cover',
         }}
         priority
+        onLoad={(e) => {
+          const target = e.target as HTMLImageElement;
+          if (target.srcset) {
+            target.dataset.load = 'done';
+          }
+        }}
       />
     </button>
   );

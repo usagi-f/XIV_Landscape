@@ -23,4 +23,9 @@
 
 .image {
   object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.image[data-load='done'] {
+  opacity: 1;
 }

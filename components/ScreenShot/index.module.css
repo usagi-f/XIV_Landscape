@@ -13,6 +13,11 @@
   vertical-align: bottom;
   width: 100%;
   height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.wrapper img[data-load='done'] {
+  opacity: 1;
 }
 .wrapper img:hover,
 .wrapper img:focus {

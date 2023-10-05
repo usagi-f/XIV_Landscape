@@ -15,7 +15,18 @@ const Overlay: React.FC<{ url: string }> = ({ url }) => {
       onClick={() => updateUrl(null)}
     >
       <div className={styles.wrapper}>
-        <Image src={url} alt="" fill className={styles.image} />
+        <Image
+          src={url}
+          alt=""
+          fill
+          className={styles.image}
+          onLoad={(e) => {
+            const target = e.target as HTMLImageElement;
+            if (target.srcset) {
+              target.dataset.load = 'done';
+            }
+          }}
+        />
       </div>
     </button>
   );
