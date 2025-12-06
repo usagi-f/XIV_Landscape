@@ -3,14 +3,16 @@ import List from '../../components/List';
 import { fetchClient } from '../../lib/fetch';
 import { shuffle } from '../../utils/shuffle';
 
-export async function generateMetadata({ params }: { params: { group: Group } }) {
+export async function generateMetadata({ params }: { params: Promise<{ group: Group }> }) {
+  const { group } = await params;
   return {
-    title: `${params.group} > XIV_Landscape`,
+    title: `${group} > XIV_Landscape`,
   }
 }
 
-export default async function Page({ params }: { params: { group: Group } }) {
-  const images = await fetchClient<ScreenShotType[]>(`/images?group=${params.group}`);
+export default async function Page({ params }: { params: Promise<{ group: Group }> }) {
+  const { group } = await params;
+  const images = await fetchClient<ScreenShotType[]>(`/images?group=${group}`);
   return images.length ? (
     <List images={shuffle(images)} />
   ) : (
